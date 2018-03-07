@@ -9,7 +9,7 @@ let s:highlight_colors = ['Title', 'Constant', 'Identifier', 'Statement', 'PrePr
 let s:i = 0
 let s:j = len(s:highlight_colors)
 while s:i < s:j
-  exec 'syntax match cid' . s:i . ' /^\s\{' . &shiftwidth*s:i . '\}[^\s#].*/'
+  exec 'syntax match cid' . s:i . ' /^ \{' . &shiftwidth*s:i . '\}[^ #].*/'
   exec 'hi def link cid' . s:i . ' ' . s:highlight_colors[s:i]
   let s:i += 1
 endwhile
